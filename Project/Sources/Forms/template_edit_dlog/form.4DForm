@@ -1,0 +1,198 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 1250,
+	"windowMinHeight": 800,
+	"windowMaxWidth": 3000,
+	"windowMaxHeight": 4000,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onDataChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 1,
+					"left": -1,
+					"width": 1254,
+					"height": 100,
+					"fill": "#f5deb3",
+					"sizingX": "grow",
+					"stroke": "transparent"
+				}
+			}
+		},
+		{
+			"objects": {
+				"btn_close": {
+					"type": "button",
+					"text": "Close",
+					"top": 8,
+					"left": 1132,
+					"width": 101,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move"
+				},
+				"Input": {
+					"type": "input",
+					"left": 99,
+					"top": 37,
+					"width": 342,
+					"height": 17,
+					"dataSource": "Form:C1466.entity.title",
+					"placeholder": "  document title"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 99,
+					"top": 8,
+					"width": 154,
+					"height": 17,
+					"dataSource": "Form:C1466.entity.kind",
+					"placeholder": "  document kind",
+					"dataSourceTypeHint": "text",
+					"enterable": true
+				},
+				"btn_save": {
+					"type": "button",
+					"text": "Save",
+					"top": 43,
+					"left": 1132,
+					"width": 101,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"shortcutAccel": true,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "s"
+				},
+				"fieldData_LB": {
+					"type": "listbox",
+					"left": 4,
+					"top": 101,
+					"width": 282,
+					"height": 650,
+					"events": [],
+					"listboxType": "collection",
+					"headerHeight": "2em",
+					"dataSource": "Form:C1466.entity.fieldData.tags",
+					"currentItemSource": "Form:C1466.this_node",
+					"selectionMode": "single",
+					"hideExtraBlankRows": true,
+					"sizingY": "fixed",
+					"sizingX": "fixed",
+					"resizingMode": "legacy",
+					"fontSize": 12,
+					"rowHeight": "23px",
+					"scrollbarHorizontal": "hidden",
+					"columns": [
+						{
+							"header": {
+								"text": "Field",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.value",
+							"width": 223,
+							"enterable": false
+						}
+					]
+				},
+				"btn_scan": {
+					"type": "button",
+					"text": "Scan Fields",
+					"top": 64,
+					"left": 99,
+					"width": 101,
+					"height": 29,
+					"events": [
+						"onClick"
+					]
+				},
+				"WParea": {
+					"type": "write",
+					"top": 101,
+					"left": 553,
+					"width": 700,
+					"height": 680,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "WParea",
+					"hideFocusRing": true,
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"borderStyle": "none",
+					"method": "ObjectMethods/WParea.4dm",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onSelectionChange",
+						"onAfterEdit"
+					]
+				},
+				"WPwidget": {
+					"type": "subform",
+					"top": 101,
+					"left": 293,
+					"width": 260,
+					"height": 680,
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"detailForm": "WP_Palette",
+					"focusable": false,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable"
+				},
+				"btn_choose": {
+					"type": "button",
+					"text": "Choose",
+					"top": 8,
+					"left": 10,
+					"width": 81,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"textPlacement": "bottom",
+					"style": "bevel",
+					"popupPlacement": "linked"
+				}
+			}
+		}
+	],
+	"geometryStamp": 363,
+	"menuBar": "Barre #1",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

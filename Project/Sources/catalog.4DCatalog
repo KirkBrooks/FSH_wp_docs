@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="FSH_WP_docs" uuid="20C2999464174C98A6F95D59D19DB6CA" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="WP_TEMPLATE" uuid="EDAD166596054C1D865A3C921A57C8D3" id="1" hide_in_REST="true">
+		<field name="ID" uuid="30EBDFEE676B4277AC00D301A7578CA8" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="kind" uuid="E9568D78C0464809B880CEE99E94B8D8" type="10" limiting_length="255" never_null="true" id="2">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="title" uuid="6B9AFAD6EE1C492DBB0472A0D9D3448B" type="10" limiting_length="255" never_null="true" id="3">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="wp_body" uuid="2FC1C0ABB46D49A3A2707FE9C302675C" type="21" blob_switch_size="2147483647" never_null="true" id="4">
+			<field_extra multi_line="false"/>
+		</field>
+		<field name="d" uuid="7CFF110447DA474FA294F255205ED11A" type="21" blob_switch_size="2147483647" never_null="true" id="5"/>
+		<field name="fieldData" uuid="78EB72FEF943496A8693E98A3763102A" type="21" blob_switch_size="2147483647" never_null="true" id="6">
+			<field_extra multi_line="false"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="30EBDFEE676B4277AC00D301A7578CA8"/>
+		<table_extra trigger_insert="true" trigger_update="true">
+			<editor_table_info displayable_fields_count="7">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="1237.5361938476" top="16.942504882816" width="170.31515502929" height="194.08822631835"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="F7E06379270D48819625532262DFE1CE" type="1">
+		<field_ref uuid="30EBDFEE676B4277AC00D301A7578CA8" name="ID">
+			<table_ref uuid="EDAD166596054C1D865A3C921A57C8D3" name="WP_TEMPLATE"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
